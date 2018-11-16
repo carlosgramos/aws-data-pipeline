@@ -2,7 +2,7 @@
 An AWS Project using S3, Glue, Comprehend, Athena and Quicksight to analyze user sentiment.
 
 The project uses an AWS Glue ETL job to ingest Amazon product reviews (in parquet format)from s3://amazon-reviews-pds/parquet. 
-The ETL job extracts the cutomer review text from the record, then a boto3 comprehend client is used to send the review text to 
+The ETL job extracts the cutomer review text from the record, then a boto3 client is used to send the review text to 
 Comprehend for sentiment analysis. Once Comprehend returns the sentiment analysis, the enriched dataset is stored in an S3 bucket.
 The dataset is now ready for querying using Athena, or for visualization using Quicksight.
 
